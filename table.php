@@ -1,6 +1,8 @@
-<?php 
+<?php
 session_start();
-
+if ($_SESSION['level'] != 1) {
+    header("Location: index.php");
+}
 
 ?>
 <!DOCTYPE html>

@@ -285,7 +285,7 @@ if ($_SESSION['level'] != 1) {
         <div class="form-group">
           <div class="col-sm-offset-2 col-sm-10">
             <button type="submit" class="btn btn-success" value="Upload Strats" class="btn btn-default">Upload Strats</button>
-            <a href="home.php"><input type="button" class="btn btn-danger" value="Go back"></a>
+            <a href="strats.php"><input type="button" class="btn btn-danger" value="Go back"></a>
           </div>
         </div>
 

@@ -1,7 +1,9 @@
 <?php
 session_start();
 $id = $_GET['id'];
-
+if ($_SESSION['level'] != 1) {
+    header("Location: index.php");
+}
 
 ?>
 <html>

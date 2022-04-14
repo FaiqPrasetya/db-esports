@@ -128,6 +128,7 @@ if ($_SESSION['level'] != 1) {
                     <th>IMAGE</th>
                     <th>DESC</th>
                     <th>Edit</th>
+                    <th>Open</th>
                     <th>Hapus</th>
                   </tr>
                 </thead>
@@ -152,6 +153,7 @@ if ($_SESSION['level'] != 1) {
                           </td>";
                     echo "<td>" . $data['strats_desc'] . "</td>";
                     echo "<td><a class='btn btn-info' href='strats_edit.php?strats_id=" . $data['strats_id'] . "'>Edit</a></td>";
+                    echo "<td><a class='btn btn-primary' href='map.php?strats_id=" . $data['strats_id'] . "'>Open</a></td>";
                     echo "<td><a class='btn btn-danger' href='backend/strats-deletion-broker.php?strats_id=" . $data['strats_id'] . "'>Hapus</a></td>";
                     echo "</tr>";
                   }

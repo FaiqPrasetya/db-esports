@@ -1,6 +1,8 @@
-<?php 
+<?php
 session_start();
-
+if ($_SESSION['level'] != 1) {
+    header("Location: index.php");
+}
 
 ?>
 <html>
@@ -26,7 +28,7 @@ session_start();
             <input placeholder="Password" type="password" name="password" tabindex="2" required autocomplete="off">
         </fieldset>
         <fieldset>
-            <input placeholder="Level" type="number" name="level" tabindex="3" required autocomplete="off">
+            <input placeholder="Level" type="number" name="level" tabindex="3" max="2" required autocomplete="off">
         </fieldset>
         <fieldset>
             <button name="submit" type="submit">Submit</button>
