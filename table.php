@@ -29,7 +29,7 @@ if ($_SESSION['level'] != 1) {
         <?php
         require('backend/koneksi.php');
 
-        $sql = "SELECT * FROM user";
+        $sql = "SELECT * FROM user WHERE username != '$_SESSION[username]'";
         $content = $connect->query($sql);
 
         while ($data = $content->fetch_assoc()) {
@@ -40,6 +40,7 @@ if ($_SESSION['level'] != 1) {
                 <td><?php echo $data['username'] ?></td>
                 <td><?php echo $data['level'] ?></td>
                 <td>
+                    
                     <a href="backend/delete_user.php?id=<?php echo $data['id']; ?>">Delete</a>
                     <a href="update_form.php?id=<?php echo $data['id']; ?>">Edit</a>
                 </td>
